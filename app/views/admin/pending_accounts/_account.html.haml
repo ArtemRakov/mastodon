@@ -1,0 +1,6 @@
+.batch-table__row
+  %label.batch-table__row__select.batch-table__row__select--aligned.batch-checkbox
+    = f.check_box :account_ids, { multiple: true, include_hidden: false }, account.id
+  .batch-table__row__content
+    %strong= account.username
+    = "(#{account.user_email}, #{account.user_current_sign_in_ip})"
